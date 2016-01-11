@@ -1,6 +1,6 @@
-Este repositorio contiene el Buildout del proyecto de Alberto Polo.
+Este repositorio contiene el Buildout del proyecto.
 No se incluye postgres en el entorno virtual, pero si se presupone instalado en el sistema, asi como un usuario odoo con capacidad de superusuario en postgres con contraseña postgres.
-Se creará una base de datos por defecto llamada odoo_apolo
+Se creará una base de datos por defecto llamada odoo
 
 # CARACTERISTICAS
 - Odoo 8.0 commit específico en el base, Supervisord 3.0
@@ -75,7 +75,7 @@ local   all             all                                     md5
 # DESCARGA Y EJECUCIÓN PROYECTO
 - Descargar el  repositorio del buildout de Alberto Polo(<ubicacion_local_repo> será la carpeta que lo contenga):
 ```
-$  git clone git@github.com:Comunitea/BO-Depots.git <ubicacion_local_repo>
+$  git clone git@github.com:Comunitea/CMNT_00040_2016_ELN.git <ubicacion_local_repo>
 ```
 - Crear un virtualenv dentro de la carpeta del respositorio. Esto podría ser opcional, obligatorio para desarrollo o servidor de pruebas, tal vez podríamos no hacerlo para un despliegue en producción.
 ```
@@ -86,7 +86,7 @@ $ virtualenv sandbox --no-setuptools
 ```
 $ mkdir eggs
 ```
-- Crear la carpeta odoo_reports que contendrá todos los repositorios necesarios para el proyecto como el vertical, localización española, módulos de account, etc...
+- Crear la carpeta odoo_reports que contendrá todos los repositorios necesarios para el proyecto como los específicos, localización española, módulos de account, etc...
 ```
 $ mkdir odoo_repos
 ```
@@ -96,12 +96,12 @@ $ mkdir odoo_repos
 $ sandbox/bin/python bootstrap.py
 ```
 - Ejecutar Buildout (con -c <configuracion_elegida> se le puede pasar el buildout.cf, que se coje por defecto o uno propio).
-- Es posible que si se usa el print serve como en el caso de alberto polo se instale el paquete libcups2-dev, sino puede fallar el buildout con el paquete pycups
+- Es posible que si se usa el print server  se deba instalar el paquete libcups2-dev, sino puede fallar el buildout con el paquete pycups
 ```
 $ sudo apt-get install libcups2-dev
 $ bin/buildout -c devel_buildout.cfg
 ```
-- Lo último que hace es intentar crear la base de datos odoo_apolo si no existiese. Puede sernecesario introducir el password, que es odoo
+- Lo último que hace es intentar crear la base de datos odoo si no existiese. Puede ser necesario introducir el password, que es odoo
 - Opcionalmente podemos lanzar supervisor
 ```
 $ bin/supervisord

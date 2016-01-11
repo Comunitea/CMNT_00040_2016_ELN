@@ -73,7 +73,7 @@ local   all             all                                     md5
 ```
 
 # DESCARGA Y EJECUCIÓN PROYECTO
-- Descargar el  repositorio del buildout de Alberto Polo(<ubicacion_local_repo> será la carpeta que lo contenga):
+- Descargar el  repositorio del buildout de Proyecto(<ubicacion_local_repo> será la carpeta que lo contenga):
 ```
 $  git clone git@github.com:Comunitea/CMNT_00040_2016_ELN.git <ubicacion_local_repo>
 ```

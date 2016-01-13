@@ -91,7 +91,7 @@ $ mkdir eggs
 $ mkdir odoo_repos
 ```
 - Ahora procedemos a crear nuestro entorno virtual (Añadiendo -c <configuracion_elegida> se le puede pasar archivo de configuración propio)
-- Es recomendable duplicar los archivos odoo.cfg y buildout.cfg a devel_odoo.cfg y devel_buildout.cfg. En el devel_buildout cambiamos la referencia de odoo.cfg a devel_odoo.cfg, y en el devel_odoo.cfg poner en la última linea: custom_addons = git git@github.com:Comunitea/custom_apolo.git odoo_repos/custom-apolo master
+- Es recomendable duplicar los archivos odoo.cfg y buildout.cfg a devel_odoo.cfg y devel_buildout.cfg. En el devel_buildout cambiamos la referencia de odoo.cfg a devel_odoo.cfg.
 ```
 $ sandbox/bin/python bootstrap.py
 ```

@@ -19,11 +19,11 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 # ##############################################################################
-# import profiler
-# import wizard
-# import expedient_invoices
-# import account_invoice
-# import expedient
-# import sale
+import profiler
+import wizard
+import expedient_invoices
+import account_invoice
+import expedient
+import sale
 # #~ import analysis
-# import stock
+import stock

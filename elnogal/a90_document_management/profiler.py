@@ -21,7 +21,7 @@
 ##############################################################################
 import jasper_reports
 import openerp.pooler as pooler
-from tools.translate import _
+from openerp.tools.translate import _
 import time
 import base64
 

@@ -5,7 +5,7 @@
         <record id="view_picking_out_form_add_supplier" model="ir.ui.view">
             <field name="name">stock.picking.out.form.add_supplier</field>
             <field name="model">stock.picking</field>
-            <field name="inherit_id" ref="stock.view_picking_out_form"/>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
             <field name="type">form</field>
             <field name="arch" type="xml">
                 <field name="address_id" position="after">
@@ -71,7 +71,7 @@
         <record id="view_picking_out_form_elnsale" model="ir.ui.view">
             <field name="name">stock.picking.out.form.elnsale</field>
             <field name="model">stock.picking</field>
-            <field name="inherit_id" ref="stock.view_picking_out_form"/>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
             <field name="type">form</field>
             <field name="arch" type="xml">
                 <xpath expr="//notebook/page[@string='Products']/field[@name='move_lines']/tree[@string='Stock Moves']/field[@name='product_uos']" position="before">

@@ -27,16 +27,16 @@
     "depends" : ["base", 'document_management', "jasper_reports", "base_report_to_printer", "account", "picking_invoice_rel", "board"],
     "category" : "Alfa",
     "init_xml" : [],
-#     "update_xml" : [
-#                 #'wizard/print_final_expedient.xml',
-#                 'expedient_invoices_view.xml',
-#                 'account_invoice_view.xml',
-#                 'expedient_view.xml',
-# #                'security/ir.model.access.csv',
-#                 'document_management_board.xml',
-#                 'wizard/process_expedient_view.xml',
-#                 'wizard/delete_invoice_expedient_view.xml'
-#     ],
+    "update_xml" : [
+                #'wizard/print_final_expedient.xml',
+                'expedient_invoices_view.xml',
+                'account_invoice_view.xml',
+                'expedient_view.xml',
+                'security/ir.model.access.csv',
+                'document_management_board.xml',
+                'wizard/process_expedient_view.xml',
+                'wizard/delete_invoice_expedient_view.xml'
+    ],
     'demo_xml': [],
     'installable': True,
     'active': False,

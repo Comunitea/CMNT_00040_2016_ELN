@@ -18,7 +18,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from osv import osv, fields
+from openerp.osv import osv, fields
 
 class stock_picking(osv.osv):
     _inherit = "stock.picking"
@@ -88,7 +88,6 @@ class stock_picking(osv.osv):
 #
 #        return res
 
-stock_picking()
 
 class stock_return_picking(osv.osv_memory):
 
@@ -110,7 +109,3 @@ class stock_return_picking(osv.osv_memory):
         pick_obj.write(cr, uid, picking_id, {'devolution_id': pick.id})
 
         return res
-
-        
-
-stock_return_picking()

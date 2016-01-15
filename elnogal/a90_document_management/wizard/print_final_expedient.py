@@ -20,14 +20,12 @@
 #
 ##############################################################################
 
-from osv import osv, fields
+from openerp.osv import osv, fields
 from pyPdf import PdfFileReader
 from tempfile import mkstemp
-import time
-import threading
 import os
 import base64
-import netsvc
+from openerp import netsvc
 import subprocess
 class print_final_expedient(osv.osv_memory):
     _name = 'print.final.expedient'
@@ -152,7 +150,3 @@ class print_final_expedient(osv.osv_memory):
 
 
         return {'type': 'ir.actions.act_window_close'}
-
-
-
-print_final_expedient()

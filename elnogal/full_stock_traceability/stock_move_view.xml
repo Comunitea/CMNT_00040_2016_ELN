@@ -44,7 +44,7 @@
             <field name="name">stock.picking.out.form.inherit2</field>
             <field name="model">stock.picking</field>
             <field name="type">form</field>
-            <field name="inherit_id" ref="stock.view_picking_out_form"/>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
             <field name="arch" type="xml">
                 <xpath expr="/form/notebook/page[@string='Products']/field[@name='move_lines']/form/group[2]/field[@name='location_id']" position="replace">
                     <field name="location_id" on_change="onchange_location_id(product_id,location_id,prodlot_id,product_qty,product_uom)" domain="[('usage','=','internal')]"/>
@@ -89,7 +89,7 @@
             <field name="name">stock.picking.in.form.inherit2</field>
             <field name="model">stock.picking</field>
             <field name="type">form</field>
-            <field name="inherit_id" ref="stock.view_picking_in_form"/>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
             <field name="arch" type="xml">
                 <xpath expr="/form/notebook/page[@string='General Information']/field[@name='move_lines']/form/group[1]/field[@name='product_id']" position="replace">
                     <field colspan="4" name="product_id" context="{'location':location_id}"  on_change="onchange_product_id(product_id, location_id, location_dest_id, parent.address_id, product_qty, prodlot_id, context)"/>
@@ -101,7 +101,7 @@
             <field name="name">stock.picking.out.form.inherit3</field>
             <field name="model">stock.picking</field>
             <field name="type">form</field>
-            <field name="inherit_id" ref="stock.view_picking_out_form"/>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
             <field name="arch" type="xml">
                 <xpath expr="/form/notebook/page[@string='Products']/field[@name='move_lines']/form/group[1]/field[@name='product_id']" position="replace">
                     <field colspan="4" name="product_id" context="{'location':location_id}" on_change="onchange_product_id(product_id, location_id, location_dest_id, parent.address_id, product_qty, prodlot_id, context)"/>

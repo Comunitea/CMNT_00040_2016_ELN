@@ -19,7 +19,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from osv import osv, fields
+from openerp.osv import osv, fields
 
 
 #class account_invoice_refund(osv.osv_memory):
@@ -150,5 +150,3 @@ class account_invoice(osv.osv):
                             self.pool.get('expedient').write(cr, uid, [current_obj.x_expedient_id.id],{'name_origin_model': current_obj.number},context=context)
 
         return res
-
-account_invoice()

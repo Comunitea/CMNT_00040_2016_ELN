@@ -19,8 +19,8 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from osv import osv, fields
-import netsvc
+from openerp.osv import osv, fields
+from openerp import netsvc
 from jasper_reports.jasper_report import report_jasper
 
 class expedient_account_invoices(osv.TransientModel):
@@ -125,5 +125,3 @@ class expedient_account_invoices(osv.TransientModel):
                     _write_log(invoice_obj,"The invoice " + invoice_obj.number + " hasn't field expedient.", context)
 
         return {'type': 'ir.actions.act_window_close'}
-
-expedient_account_invoices()

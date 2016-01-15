@@ -19,7 +19,7 @@
 #
 ##############################################################################
 
-from osv import osv, fields
+from openerp.osv import osv, fields
 
 class delete_invoice_expedient(osv.osv_memory):
 
@@ -33,5 +33,3 @@ class delete_invoice_expedient(osv.osv_memory):
                 invoice.write({'x_expedient_id': False})
 
         return {}
-
-delete_invoice_expedient()

@@ -18,7 +18,7 @@
         <record id="view_picking_out_form_date_inh" model="ir.ui.view">
             <field name="name">picking.out.form.date.inh</field>
             <field name="model">stock.picking</field>
-            <field name="inherit_id" ref="stock.view_picking_out_form"/>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
             <field name="type">form</field>
             <field name="arch" type="xml">
                 <field name="date" position="before">
@@ -43,7 +43,7 @@
         <record id="view_picking_in_form_date_inh" model="ir.ui.view">
             <field name="name">picking.in.form.date.inh</field>
             <field name="model">stock.picking</field>
-            <field name="inherit_id" ref="stock.view_picking_in_form"/>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
             <field name="type">form</field>
             <field name="arch" type="xml">
                 <field name="date" position="before">

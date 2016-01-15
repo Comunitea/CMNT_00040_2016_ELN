@@ -20,8 +20,8 @@
 #
 ##############################################################################
 
-import tools
-from osv import osv, fields
+from openerp import tools
+from openerp.osv import osv, fields
 
 class expedient_analysis(osv.osv):
     _name = "expedient.analysis"
@@ -91,5 +91,3 @@ class expedient_analysis(osv.osv):
                 
             ) 
         """)
-
-expedient_analysis()

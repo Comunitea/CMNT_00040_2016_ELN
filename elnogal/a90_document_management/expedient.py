@@ -19,7 +19,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from osv import osv, fields
+from openerp.osv import osv, fields
 
 from pyPdf import PdfFileReader, PdfFileWriter
 import os
@@ -253,8 +253,3 @@ class expedient(osv.osv):
                 self.pool.get('expedient').log_expedient(cr, uid, expedient_id.id, message, False, expedient_id.id, context=context)
 
         return True
-
-
-
-
-expedient()

@@ -236,7 +236,7 @@
         <!--record model="ir.ui.view" id="view_edi_stock_picking_add_contract_form" >
             <field name="name">view.edi.stock.picking.add.contract.form</field>
             <field name="model">stock.picking</field>
-            <field name="inherit_id" ref="stock.view_picking_out_form" />
+            <field name="inherit_id" ref="stock.view_picking_form" />
             <field name="type">form</field>
             <field name="arch" type="xml">
                 <field name="stock_journal_id" position="after">

@@ -1,0 +1,226 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* auto_attach_document_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-23 09:52+0000\n"
+"PO-Revision-Date: 2012-05-23 12:45+0100\n"
+"Last-Translator: Marta <marta@pexego.es>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: auto_attach_document_management
+#: model:ir.actions.act_window,name:auto_attach_document_management.view_record_document_action
+#: model:ir.ui.menu,name:auto_attach_document_management.menu_documents
+#: model:ir.ui.menu,name:auto_attach_document_management.record_document_menu_id
+#: view:record.document:0
+msgid "Documents"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: view:record.document:0
+msgid "Confirm"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: model:ir.model,name:auto_attach_document_management.model_record_document_page
+msgid "Pages from Document"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: view:record.document.page:0
+msgid "Document Page"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: view:record.document:0
+#: view:record.document.page:0
+msgid "Documents in queue"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: model:ir.model,name:auto_attach_document_management.model_scan_document
+msgid "scan.document"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: field:record.document,state:0
+#: field:record.document.page,state:0
+msgid "State"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: view:record.document:0
+msgid "Draft"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: field:record.document.page,attachment_id:0
+msgid "Attachment"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: model:ir.model,name:auto_attach_document_management.model_record_document
+#: field:record.document.page,document_id:0
+msgid "Document"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: code:addons/auto_attach_document_management/scan_document.py:138
+#, python-format
+msgid "Document attached automatically"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: field:record.document.page,scanned_document_id:0
+msgid "Scanned Document"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: field:record.document,required_pages:0
+msgid "Required Pages"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: code:addons/auto_attach_document_management/scan_document.py:117
+#, python-format
+msgid "Page %s of %s"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: field:record.document,report_id:0
+msgid "Report"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: code:addons/auto_attach_document_management/scan_document.py:65
+#, python-format
+msgid "Page without barcode processed and no document is set on queue %s"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: view:record.document:0
+#: field:record.document,pages:0
+msgid "Pages"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: code:addons/auto_attach_document_management/document.py:142
+#: code:addons/auto_attach_document_management/document.py:153
+#, python-format
+msgid "Pdf Generated from document Images"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: field:record.document,name:0
+#: field:record.document.page,name:0
+msgid "Name"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: field:record.document,required:0
+msgid "Required"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: code:addons/auto_attach_document_management/scan_document.py:81
+#, python-format
+msgid ""
+"Page will be added on Document %s\" %\n"
+"                            property.document_id.name )\n"
+"\n"
+"                        if number_page:\n"
+"                            data['task'] += _(\" Page: %s\" % number_page)\n"
+"\n"
+"                        document_id = property.document_id.id\n"
+"\n"
+"                        break\n"
+"\n"
+"            self.write(cr, uid, [page.id], data, context)\n"
+"            self.pool.get('scan.queue').write(cr, uid, [queue.id],\n"
+"                    {'last_document_id': document_id}, context)\n"
+"    def verified_document(self, cr, uid, ids, context=None):\n"
+"        if not ids:\n"
+"            ids = self.search(cr, uid, [('state','=','analyzed')])\n"
+"        document_obj = self.pool.get('record.document')\n"
+"        page_obj = self.pool.get('record.document.page')\n"
+"        document_id = False\n"
+"        for page in self.browse(cr, uid, ids, context):\n"
+"            barcode = ''\n"
+"            if page.property_ids:\n"
+"                for property in page.property_ids:\n"
+"                    if property.value:\n"
+"                        barcode = property.value\n"
+"\n"
+"            if barcode:\n"
+"                barcode = barcode.split('/')\n"
+"                model = barcode[0]\n"
+"                report = barcode[1]\n"
+"                report_ids = self.pool.get('ir.actions.report.xml').search(cr, uid, [('report_name','=', report)])\n"
+"                report_obj = self.pool.get('ir.actions.report.xml').browse(cr, uid, report_ids[0], context=context)\n"
+"                report_name = report_obj.name\n"
+"                pages = int(barcode[2].split(\"PAG"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: field:record.document,pdf:0
+msgid "Pdf"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: field:record.document,model:0
+msgid "Model"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: code:addons/auto_attach_document_management/scan_document.py:69
+#, python-format
+msgid "Page will be added on Document %s"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: model:res.groups,name:auto_attach_document_management.group_record_user
+msgid "Record / User"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: model:ir.model,name:auto_attach_document_management.model_scan_queue
+msgid "Scan Queue"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: field:record.document.page,sequence:0
+msgid "Sequence"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: field:scan.queue,last_document_id:0
+msgid "Last Document"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: view:record.document:0
+msgid "Cancel"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: field:record.document,valid:0
+msgid "Valid?"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: field:record.document,document_page_ids:0
+msgid "Document Pages"
+msgstr ""
+
+#. module: auto_attach_document_management
+#: field:record.document.page,page_number:0
+msgid "Page Number"
+msgstr ""
+

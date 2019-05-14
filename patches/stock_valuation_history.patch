@@ -1,0 +1,30 @@
+From d7851ef338cdb649348f5ae33f2d6cd9937f264d Mon Sep 17 00:00:00 2001
+From: Pedro Gomez <pegomez@elnogal.com>
+Date: Tue, 14 May 2019 15:45:18 +0200
+Subject: [PATCH] Improved performance inventory value calculation
+
+---
+ addons/stock_account/wizard/stock_valuation_history.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/addons/stock_account/wizard/stock_valuation_history.py b/addons/stock_account/wizard/stock_valuation_history.py
+index 49e66d4..09e6008 100644
+--- a/addons/stock_account/wizard/stock_valuation_history.py
++++ b/addons/stock_account/wizard/stock_valuation_history.py
+@@ -55,11 +55,11 @@ class stock_history(osv.osv):
+             line_ids = set()
+             for ids in group_lines.values():
+                 for product_id in ids:
+-                    line_ids.add(product_id)
++                    line_ids.add(abs(product_id))
+             line_ids = list(line_ids)
+             lines_rec = {}
+             if line_ids:
+-                cr.execute('SELECT id, product_id, price_unit_on_quant, company_id, quantity FROM stock_history WHERE id in %s', (tuple(line_ids),))
++                cr.execute('SELECT id, product_id, price_unit_on_quant, company_id, quantity FROM stock_history WHERE move_id in %s', (tuple(line_ids),))
+                 lines_rec = cr.dictfetchall()
+             lines_dict = dict((line['id'], line) for line in lines_rec)
+             product_ids = list(set(line_rec['product_id'] for line_rec in lines_rec))
+-- 
+2.7.4
+

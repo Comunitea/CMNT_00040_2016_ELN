@@ -93,7 +93,7 @@ $ mkdir odoo_repos
 - Ahora procedemos a crear nuestro entorno virtual (Añadiendo -c <configuracion_elegida> se le puede pasar archivo de configuración propio)
 - Es recomendable duplicar los archivos odoo.cfg y buildout.cfg a devel_odoo.cfg y devel_buildout.cfg. En el devel_buildout cambiamos la referencia de odoo.cfg a devel_odoo.cfg.
 ```
-$ sandbox/bin/python bootstrap.py
+$ sandbox/bin/python bootstrap.py --setuptools-version 44.1.1
 ```
 - Ejecutar Buildout (con -c <configuracion_elegida> se le puede pasar el buildout.cf, que se coje por defecto o uno propio).
 - Es posible que si se usa el print server  se deba instalar el paquete libcups2-dev, sino puede fallar el buildout con el paquete pycups
